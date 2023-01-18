@@ -16,6 +16,8 @@ import { updateData } from '../../../hooks/useLocalStorage'
 
 const TimeSetting = ({ loading, timeInputData }) => {
 
+    if (!loading) return
+
     // use state for input values changes
     const [timeInput, setTimeInput] = useState(timeInputData)
     const [formOpen, setFormOpen] = useState(false)

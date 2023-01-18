@@ -63,7 +63,7 @@ const Home = () => {
 
     useState(() => {
 
-        const loadTimeSettingData = async () => {
+        const loadTimeSettingDataServer = async () => {
 
             let timeSettingData
 
@@ -89,7 +89,7 @@ const Home = () => {
         }
 
         // call function only run 1 time when loading page
-        loadTimeSettingData()
+        loadTimeSettingDataServer()
     }, [])
 
     return (
