@@ -1,0 +1,138 @@
+// .hiddenReport {
+//     // display: none;
+// }
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+
+    .homeImg {
+        width: 100%;
+
+
+        img {
+            width: 100%;
+            border-radius: 4px;
+            transition: .3s;
+        }
+
+    }
+
+    .box {
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: 5px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding: 10px;
+
+        >div:nth-child(2) {
+            margin-top: 20px;
+        }
+    }
+
+    .box2 {
+        width: 100%;
+        border: 1px dashed gray;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 80px;
+        font-weight: bolder;
+        color: grey;
+        cursor: pointer;
+    }
+
+    .reportBox {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+
+    .box4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+
+        span:nth-child(1) {
+            font-size: 15px;
+            color: gray;
+        }
+
+        span:nth-child(2) {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+
+    .totalData {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .posts {
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            background-color: orange;
+            gap: 20px;
+        }
+    }
+
+    .statusListBox {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding-right: 10px;
+
+        span:nth-child(2) {
+            width: 100%;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.fillFormIcon {
+    position: relative;
+}
+
+.fillFormIcon::before {
+    position: absolute;
+    top: 95px;
+    left: -50px;
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 40px;
+    content: attr(data-name);
+    background-color: gray;
+    font-size: 10px;
+    border-radius: 50px;
+    color: #fff;
+    animation: animate 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes animate {
+
+    0% {
+        left: -130px;
+    }
+
+    100% {
+        left: 30px;
+    }
+}
