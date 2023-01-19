@@ -88,7 +88,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            padding:20px;
+            padding: 20px;
             align-items: flex-end;
             gap: 10px;
             color: white;
@@ -98,7 +98,7 @@
                 display: flex;
             }
 
-            .detailCopyButton{
+            .detailCopyButton {
                 width: 30%;
                 padding: 7px 10px;
                 background-color: #fff;
@@ -144,11 +144,16 @@
                 border-radius: 50%;
                 transition: .3s;
             }
-            .sn{
+
+            .sn {
                 font-size: 18px;
+                display: flex;
+                background: blueviolet;
+                color: white;
+                margin-right: 5px
             }
 
-            .arrow{
+            .arrow {
                 transform: rotate(-90deg);
             }
 
@@ -159,7 +164,7 @@
                 flex-direction: column;
                 text-transform: capitalize;
 
-                span:nth-child(2){
+                span:nth-child(2) {
                     font-size: 10px;
                     color: gray;
                 }
@@ -176,7 +181,7 @@
     }
 }
 
-.pagination{
+.pagination {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -184,7 +189,7 @@
     padding: 10px;
     border-radius: 4px;
 
-    span{
+    span {
         width: max-content;
         border-radius: 3px;
         cursor: pointer;

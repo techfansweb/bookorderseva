@@ -45,39 +45,40 @@ const Pdf = () => {
 
         // covert to canvas
         const canvas = await html2canvas(html)
-        return canvas.toDataURL("jpg/jpeg", 1.0)
+        return canvas.toDataURL("jpg/jpeg", 0.5)
     }
 
     // downlaod report
     const downloadReport = async () => {
 
         setDownload(true)
+
         const pdf = new jsPDF({
             orientation: "p",
             compress: true
-        })
+        });
 
         // page 1
         const image1 = await convertHtmlToCanvas(document.getElementById("reportImage2"))
-        pdf.addImage(image1, 'JPEG', 0, 0)
+        pdf.addImage(image1, 'JPEG', 0, 0, 210, 300)
 
         pdf.addPage() // add new page
 
         // page 2
         const image2 = await convertHtmlToCanvas(document.getElementById("reportImage3"))
-        pdf.addImage(image2, 'JPEG', 0, 0)
+        pdf.addImage(image2, 'JPEG', 0, 0, 210, 300)
 
         pdf.addPage() // add new page
 
         // page 3
         const image3 = await convertHtmlToCanvas(document.getElementById("reportImage4"))
-        pdf.addImage(image3, 'JPEG', 0, 0)
+        pdf.addImage(image3, 'JPEG', 0, 0, 210, 300)
 
         pdf.addPage() // add new page
 
         // page 4
         const image4 = await convertHtmlToCanvas(document.getElementById("reportImage5"))
-        pdf.addImage(image4, 'JPEG', 0, 0)
+        pdf.addImage(image4, 'JPEG', 0, 0, 210, 300)
 
         // save file
         const title = `upBookOrderReport.${dayjs().format("DD-MM-YYYY")}.pdf`

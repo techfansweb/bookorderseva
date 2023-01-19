@@ -12,7 +12,7 @@ const useReportFormet = (data) => {
         return text
     })
 
-    const head = `        *N O* - *I O*\n`
+    const head = `         *N O* - *I O*\n`
     arr.unshift(head)
 
     return arr
